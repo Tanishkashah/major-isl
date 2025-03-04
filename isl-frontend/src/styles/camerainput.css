@@ -1,0 +1,85 @@
+/* Camera Input Page Styling */
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading Styling */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Video Frame Styling */
+.video-frame {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  animation: scaleUp 1s ease-in-out;
+}
+
+/* Capture Button */
+.capture-btn {
+  background: #e63946;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.capture-btn:hover {
+  transform: scale(1.1);
+  background: #ffb703;
+}
+
+/* Captured Image */
+.captured-image {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-frame {
+    max-width: 90%;
+  }
+
+  .capture-btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0.5; }
+  to { transform: scale(1); opacity: 1; }
+}
